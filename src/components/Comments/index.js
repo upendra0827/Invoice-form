@@ -3,7 +3,6 @@ import './styles.css'
 import Header from "../shared/Header";
 import CommentsIcon from '../../assets/icons/Comments.svg'
 import { renderForm } from "../../helpers/utility";
-import { Formik, Form } from "formik";
 import './styles.css'
 import SendIcon from '../../assets/icons/Send.svg'
 
