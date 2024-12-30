@@ -6,6 +6,17 @@ import CurrencyForm from "../components/shared/Currency";
 import * as Yup from 'yup';
 import StarIcon from '../assets/icons/Star.svg'
 
+const getFieldValue = (props, name) => {
+    const array = name.split('.'); // Split the name into keys
+
+    const ans = array.reduce((acc, key) => {
+        // Access each property in props using the current key
+        return acc ? acc[key] : undefined;
+    }, props.values); // Initialize the accumulator with props
+
+    return ans
+};
+
 export const renderForm = (props, element) => {
     switch (element.type) {
         case 'text':
@@ -64,7 +75,7 @@ export const renderForm = (props, element) => {
                             border: "1px solid #64748B",
                             borderRadius: "4px",
                             width: "100%",
-                            color: "#aaa",
+                            color: !element.options.filter(option => option.label === getFieldValue(props, element.name)).length ? "#aaa" : '#0D0F11',
                             backgroundColor: 'white',
                             backgroundImage: `url('${ChevronDownIcon}')`,
                             backgroundRepeat: 'no-repeat',
