@@ -3,6 +3,7 @@ import { useField, useFormikContext } from 'formik';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './styles.css'
+import { checkFieldError } from '../../../helpers/utility';
 
 const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -14,22 +15,22 @@ const formatDate = (dateString) => {
 };
 
 
-const FormikDatePicker = ({ props }) => {
+const FormikDatePicker = ({ element, props }) => {
     const { setFieldValue } = useFormikContext();
-    const [field] = useField(props);
+    const [field] = useField(element);
     return (
         <div style={{}}>
             <DatePicker
-                id={props.name}
+                id={element.name}
                 {...field}
-                {...props}
+                {...element}
                 dateFormat="MM/dd/yyyy"
                 selected={(field.value && formatDate(new Date(field.value))) || null}
-                onChange={(val) => setFieldValue(props.name, formatDate(val))}
-                placeholderText={props.placeholder}
-                className="date-picker"
-                maxDate={props.maxDate}
-                minDate={props.minDate}
+                onChange={(val) => setFieldValue(element.name, formatDate(val))}
+                placeholderText={element.placeholder}
+                className={`date-picker ${checkFieldError(props, element.name) ? 'date-error' : 'date-success'}`}
+                maxDate={element.maxDate}
+                minDate={element.minDate}
             />
         </div>
     );

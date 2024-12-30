@@ -7,14 +7,27 @@ import * as Yup from 'yup';
 import StarIcon from '../assets/icons/Star.svg'
 
 const getFieldValue = (props, name) => {
-    const array = name.split('.'); 
+    const array = name.split('.');
 
     const ans = array.reduce((acc, key) => {
         return acc ? acc[key] : undefined;
-    }, props.values); 
+    }, props.values);
 
     return ans
 };
+
+export const checkFieldError = (props, name) => {
+    const array = name.split('.');
+    let error = props.errors;
+
+    for (let i = 0; i < array.length; i++) {
+        if (!error || !error[array[i]]) {
+            return null;
+        }
+        error = error[array[i]];
+    }
+    return error;
+}
 
 export const renderForm = (props, element) => {
     switch (element.type) {
@@ -33,7 +46,7 @@ export const renderForm = (props, element) => {
                         style={{
                             height: '41px',
                             padding: '8px',
-                            border: '1px solid #64748B', borderRadius: '4px', width: '100%',
+                            border: !checkFieldError(props, element.name) ? "1px solid #64748B" : '1px solid red',
                             backgroundImage: `url('${element.icon}')`,
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'right 10px center',
@@ -52,7 +65,7 @@ export const renderForm = (props, element) => {
                         {element.label && <label htmlFor={element.name}>{element.label}</label>}
                         {element.important && <img src={StarIcon} alt="star" width='6px' />}
                     </div>
-                    <CurrencyForm props={element} />
+                    <CurrencyForm props={props} element={element} />
                     <ErrorMessage className="error" name={element.name} component="div" style={{ color: "red" }} />
                 </div>
             )
@@ -71,7 +84,7 @@ export const renderForm = (props, element) => {
                         style={{
                             height: '41px',
                             padding: "8px",
-                            border: "1px solid #64748B",
+                            border: !checkFieldError(props, element.name) ? "1px solid #64748B" : '1px solid red',
                             borderRadius: "4px",
                             width: "100%",
                             color: !element.options.filter(option => option.label === getFieldValue(props, element.name)).length ? "#aaa" : '#0D0F11',
@@ -105,7 +118,7 @@ export const renderForm = (props, element) => {
                         {element.label && <label htmlFor={element.name}>{element.label}</label>}
                         {element.important && <img src={StarIcon} alt="star" width='6px' />}
                     </div>
-                    <FormikDatePicker props={element} />
+                    <FormikDatePicker element={element} props={props} />
                     <ErrorMessage className="error" name={element.name} component="div" style={{ color: "red" }} />
                 </div>
             )

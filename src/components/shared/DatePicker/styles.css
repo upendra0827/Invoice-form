@@ -11,8 +11,15 @@ input {
     padding: var(--SpacingS);
     padding-left: 36px;
     padding-right: 0;
-    border: 1px solid var(--BorderSecondary);
     border-radius: var(--RadiusS);
+}
+
+.date-success {
+    border: 1px solid var(--BorderSecondary);
+}
+
+.date-error {
+    border: 1px solid red;
 }
 
 .react-datepicker-wrapper {
@@ -25,4 +32,5 @@ input {
     background-position: left 10px center, right 10px center;
     background-size: 12px;
     appearance: none;
+    /* border: 1px solid red; */
 }
