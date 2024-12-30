@@ -1,0 +1,13 @@
+.sub-heading {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--ContentPrimary);
+    margin-bottom: var(--Spacing2XL);
+    /* margin-top: var(--Spacing2XL); */
+}

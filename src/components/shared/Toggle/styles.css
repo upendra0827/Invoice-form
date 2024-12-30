@@ -1,0 +1,36 @@
+.options {
+    display: flex;
+    background-color: var(--BackgroundSecondary);
+    width: fit-content;
+    width: 93px;
+    height: 32px;
+    padding: var(--Spacing2XS);
+    gap: 0px;
+    border-radius: var(--RadiusFull);
+    opacity: 0px;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 41px;
+    height: 24px;
+    padding: var(--Spacing2XS) var(--SpacingM) var(--Spacing2XS) var(--SpacingM);
+    border-radius: var(--RadiusFull);
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: var(--ContentSecondary);
+}
+
+.selected {
+    background-color: var(--ContentBrand);
+    color: var(--BackgroundPrimary) !important;
+}

@@ -1,0 +1,18 @@
+.vendor-details__heading {
+    display: flex;
+    align-items: center;
+    gap: var(--SpacingM);
+    margin-bottom: var(--Spacing2XL);
+}
+
+.vendor-details__heading> :nth-child(2) {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--ContentPrimary);
+}

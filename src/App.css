@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* .App {
+  min-height: 100vh;
+} */
+
+.App>form {
+  display: flex;
+  width: 100%;
+  gap: 18px;
+}
+
+.App>form> :nth-child(1), .App>form> :nth-child(2) {
+  width: 50%;
+}
+
+.currency {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--SpacingXS);
+  border-radius: var(--RadiusS);
+}
+
+label {
+  color: #4B5768;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+
+.error {
+  font-family: 'Inter';
+  font-size: 12px;
+}
+
+@media (max-width: 1020px) {
+  .App>form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .App>form> :nth-child(1), .App>form> :nth-child(2) {
+    width: auto;
+  }
+}

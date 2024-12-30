@@ -1,0 +1,150 @@
+.upload-invoice {
+    width: 98%;
+    /* Maintain original width for large screens */
+    height: 844px;
+    /* Original height */
+    top: 92px;
+    left: 24px;
+    border-radius: var(--RadiusS);
+    opacity: 0px;
+    text-align: center;
+    border: 0.5px dashed #64748B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-invoice img {
+    border: none;
+}
+
+button {
+    display: flex;
+    border: 1px solid var(--BorderSecondary);
+    background-color: var(--BackgroundPrimary);
+    padding: var(--SpacingS) var(--SpacingL);
+    gap: var(--SpacingXS);
+    border-radius: var(--RadiusS);
+}
+
+button> :nth-child(1) {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--SpacingXS);
+    margin-bottom: var(--SpacingM);
+}
+
+.heading> :nth-child(1) {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--ContentPrimary);
+}
+
+.heading> :nth-child(2) {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--ContentPrimary);
+}
+
+.upload-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--SpacingM);
+    margin-bottom: var(--SpacingM);
+    cursor: pointer;
+}
+
+.file-upload {
+    margin-bottom: var(--SpacingM);
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .upload-invoice {
+        width: 90%;
+        /* Adjust width for tablets */
+        height: auto;
+        /* Let the height adjust naturally */
+        padding: var(--SpacingM);
+        margin: 0 auto;
+        /* Center align */
+    }
+
+    .heading> :nth-child(1) {
+        font-size: 18px;
+        /* Reduce font size */
+    }
+
+    .heading> :nth-child(2) {
+        font-size: 14px;
+        /* Adjust text size for better readability */
+    }
+
+    button {
+        flex-wrap: wrap;
+        /* Allow text and icon to wrap */
+        padding: var(--SpacingXS) var(--SpacingM);
+    }
+
+    button> :nth-child(1) {
+        font-size: 14px;
+    }
+
+    .file-upload {
+        max-width: 70%;
+        /* Scale down image size */
+        height: auto;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .upload-invoice {
+        width: 95%; 
+        padding: var(--SpacingS);
+    }
+
+    .heading> :nth-child(1),
+    .heading> :nth-child(2) {
+        font-size: 16px; 
+    }
+
+    button {
+        flex-direction: column; 
+        gap: var(--SpacingXS);
+    }
+
+    button img {
+        max-width: 16px;
+        height: auto;
+    }
+
+    .file-upload {
+        max-width: 60%;
+    }
+} */

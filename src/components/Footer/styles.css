@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    width: 732px;
+    top: 1536px;
+    left: 708px;
+    padding: var(--SpacingM) var(--SpacingL) var(--SpacingM) var(--SpacingL);
+    gap: var(--SpacingXL);
+    border-radius: var(--RadiusS) var(--RadiusS) 0px 0px;
+    border: 1px 1px 0px 1px;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: var(--Border-Tertiary, #E7EAEE);
+    float: right;
+    margin-top: var(--SpacingXL);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        float: none; /* Remove float for small screens */
+        width: 100%; /* Make the footer full-width */
+        max-width: 768px; /* Limit the maximum width */
+        padding: var(--SpacingM); /* Adjust padding */
+        box-sizing: border-box; 
+        border:none;
+    }
+
+    .footer img {
+        display: none; /* Ensure images are visible */
+        width: 48px;
+        height: 48px;
+        margin: 0 auto; /* Center images */
+        padding: var(--SpacingS);
+        border-radius: var(--RadiusS);
+    }
+
+    .footer > button {
+        width: 100%;
+    }
+}

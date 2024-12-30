@@ -1,0 +1,28 @@
+/* .currency input {
+    border: 1px solid var(--BorderSecondary) !important;
+    border-left: none !important;
+    border-radius: var(--RadiusS);
+} */
+
+input {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    padding: var(--SpacingS);
+    padding-left: 36px;
+    padding-right: 0;
+    border: 1px solid var(--BorderSecondary);
+    border-radius: var(--RadiusS);
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.date-picker {
+    background-image: url('/src/assets/icons/Calender.svg'), url('/src/assets/icons/ChevronDown.svg');
+    background-repeat: no-repeat;
+    background-position: left 10px center, right 10px center;
+    background-size: 12px;
+    appearance: none;
+}

@@ -1,0 +1,57 @@
+.version-1 {
+    opacity: 0px;
+    border: 1px solid var(--BorderSecondary);
+    padding: var(--SpacingS) var(--SpacingL) var(--SpacingS) var(--SpacingL);
+    gap: var(--SpacingXS);
+    border-radius: var(--RadiusS);
+    opacity: 0px;
+    width: 298px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.version-2 {
+    background-color: var(--ContentBrand);
+    color: var(--BackgroundPrimary);
+    border: none;
+    padding: var(--SpacingS) var(--SpacingL) var(--SpacingS) var(--SpacingL);
+    gap: var(--SpacingXS);
+    border-radius: var(--RadiusS);
+    opacity: 0px;
+    width: 298px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    cursor: pointer;
+}
+
+.version-3 {
+    width: 195px;
+    height: 36px;
+    padding: var(--SpacingXS) var(--SpacingM) var(--SpacingXS) var(--SpacingM);
+    gap: var(--SpacingXS);
+    border-radius: var(--RadiusS);
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--ContentPrimary);
+    font-size: 14px;
+}

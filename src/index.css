@@ -1,0 +1,35 @@
+body {
+  margin: 60px 90px;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin: 10px 12px;
+  }
+}
+
+:root {
+  --RadiusS: 8px;
+  --SpacingXS: 8px;
+  --SpacingS: 12px;
+  --SpacingM: 16px;
+  --SpacingL: 20px;
+  --SpacingXL: 24px;
+  --Spacing2XL: 32px;
+  --Spacing3XL: 40px;
+  --BackgroundSecondary: #E7EAEE;
+  --BorderSecondary: #64748B;
+  --BackgroundPrimary: #FFFFFF;
+  --ContentPrimary: #0D0F11;
+  --ContentSecondary: #4B5768;
+  --ContentBrand: #1787E0;
+  --RadiusFull: 99999px;
+}

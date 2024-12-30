@@ -1,0 +1,17 @@
+.general-nformation {
+    margin-bottom: var(--Spacing2XL);
+}
+
+.invoice-details-form > :nth-child(1) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .invoice-details-form > :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    } 
+}
