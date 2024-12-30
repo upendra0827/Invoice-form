@@ -7,12 +7,11 @@ import * as Yup from 'yup';
 import StarIcon from '../assets/icons/Star.svg'
 
 const getFieldValue = (props, name) => {
-    const array = name.split('.'); // Split the name into keys
+    const array = name.split('.'); 
 
     const ans = array.reduce((acc, key) => {
-        // Access each property in props using the current key
         return acc ? acc[key] : undefined;
-    }, props.values); // Initialize the accumulator with props
+    }, props.values); 
 
     return ans
 };
