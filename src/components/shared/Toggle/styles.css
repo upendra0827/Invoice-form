@@ -7,7 +7,6 @@
     padding: var(--Spacing2XS);
     gap: 0px;
     border-radius: var(--RadiusFull);
-    opacity: 0px;
     justify-content: space-around;
     align-items: center;
     cursor: pointer;

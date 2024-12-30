@@ -1,10 +1,8 @@
 .version-1 {
-    opacity: 0px;
     border: 1px solid var(--BorderSecondary);
     padding: var(--SpacingS) var(--SpacingL) var(--SpacingS) var(--SpacingL);
     gap: var(--SpacingXS);
     border-radius: var(--RadiusS);
-    opacity: 0px;
     width: 298px;
     height: 48px;
     font-size: 16px;
@@ -22,7 +20,6 @@
     padding: var(--SpacingS) var(--SpacingL) var(--SpacingS) var(--SpacingL);
     gap: var(--SpacingXS);
     border-radius: var(--RadiusS);
-    opacity: 0px;
     width: 298px;
     height: 48px;
     font-size: 16px;
@@ -48,7 +45,6 @@ button {
     gap: var(--SpacingXS);
     border-radius: var(--RadiusS);
     border: 1px 0px 0px 0px;
-    opacity: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

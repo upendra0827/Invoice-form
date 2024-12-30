@@ -6,7 +6,6 @@
     top: 92px;
     left: 24px;
     border-radius: var(--RadiusS);
-    opacity: 0px;
     text-align: center;
     border: 0.5px dashed #64748B;
     display: flex;

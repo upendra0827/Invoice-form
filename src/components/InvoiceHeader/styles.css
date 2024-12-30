@@ -37,7 +37,6 @@
     padding: var(--SpacingS) var(--SpacingM) var(--SpacingS) var(--SpacingM);
     gap: var(--SpacingXS);
     border: 0px 0px 2px 0px;
-    opacity: 0px;
     text-align: center;
 }
 
