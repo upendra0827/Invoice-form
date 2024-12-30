@@ -16,7 +16,22 @@ const getFieldValue = (props, name) => {
     return ans
 };
 
+export const checkFieldTouched = (props, name) => {
+    const array = name.split('.');
+    let isTouched = props.touched
+
+    for (let i = 0; i < array.length; i++) {
+        if (!isTouched || !isTouched[array[i]]) {
+            return null;
+        }
+        isTouched = isTouched[array[i]];
+    }
+
+    return isTouched
+}
+
 export const checkFieldError = (props, name) => {
+    if (!checkFieldTouched(props, name)) return false
     const array = name.split('.');
     let error = props.errors;
 
@@ -26,6 +41,7 @@ export const checkFieldError = (props, name) => {
         }
         error = error[array[i]];
     }
+
     return error;
 }
 
@@ -71,6 +87,7 @@ export const renderForm = (props, element) => {
             )
 
         case 'dropdown':
+            // console.log(checkFieldError(props, element.name), props.errors, element.name, '..............')
             return (
                 <div className="input-field">
                     <div style={{ display: 'flex', alignItems: 'flex-start' }}>
@@ -117,7 +134,8 @@ export const renderForm = (props, element) => {
                     <div style={{ display: 'flex', alignItems: 'flex-start' }}>
                         {element.label && <label htmlFor={element.name}>{element.label}</label>}
                         {element.important && <img src={StarIcon} alt="star" width='6px' />}
-                    </div>
+                    </div>import {checkFieldError} from './utility';
+
                     <FormikDatePicker element={element} props={props} />
                     <ErrorMessage className="error" name={element.name} component="div" style={{ color: "red" }} />
                 </div>
