@@ -47,10 +47,16 @@
 }
 
 @media (max-width: 1020px) {
-    .invoice-header-container, .invoice-header-container>div:nth-child(2) {
+    .invoice-header-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    .invoice-header-container>div:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
     }
 
     .invoice-header-container>div:nth-child(1) {

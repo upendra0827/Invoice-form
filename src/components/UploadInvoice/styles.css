@@ -91,7 +91,7 @@ button> :nth-child(1) {
         height: auto;
         /* Let the height adjust naturally */
         padding: var(--SpacingM);
-        margin: 0 auto;
+        margin: 0;
         /* Center align */
     }
 
