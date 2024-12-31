@@ -8,7 +8,6 @@ const CurrencyForm = ({ props, element }) => {
     return (
         <div className="currency">
             <div style={{ display: "flex", alignItems: "center" }}>
-                {/* <img src={CurrencyIcon} alt="currency-icon" className={`${ !checkFieldError(props, element.name) ? 'currency-icon' : 'currency-icon-error'}`} style={{ border: "1px solid #64748B", borderRight: 'none' }} /> */}
                 <Field
                     name={element.name}
                     id={element.name}
@@ -16,10 +15,6 @@ const CurrencyForm = ({ props, element }) => {
                     placeholder={element.placeholder}
                     className='currency-field'
                     style={{
-                        // backgroundImage: `url('${element.icon}')`,
-                        // backgroundRepeat: 'no-repeat',
-                        // backgroundPosition: 'right 10px center',
-                        // appearance: 'none',
                         border: !checkFieldError(props, element.name) ? "1px solid #64748B" : '1px solid red',
                     }}
                 />

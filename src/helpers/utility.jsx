@@ -68,6 +68,7 @@ export const renderForm = (props, element) => {
                             backgroundPosition: 'right 10px center',
                             backgroundSize: '12px',
                             appearance: 'none',
+                            borderRadius: '8px',
                         }}
                     />
                     <ErrorMessage className="error" name={element.name} component="div" style={{ color: 'red' }} />
@@ -103,7 +104,7 @@ export const renderForm = (props, element) => {
                             border: !checkFieldError(props, element.name) ? "1px solid #64748B" : '1px solid red',
                             borderRadius: "8px",
                             width: "100%",
-                            color: !element.options.filter(option => option.label === getFieldValue(props, element.name)).length ? "#aaa" : '#0D0F11',
+                            color: !element.options.filter(option => option.label === getFieldValue(props, element.name) || option.value === getFieldValue(props, element.name)).length ? "#aaa" : '#0D0F11',
                             backgroundColor: 'white',
                             backgroundImage: `url('${ChevronDownIcon}')`,
                             backgroundRepeat: 'no-repeat',

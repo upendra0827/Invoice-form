@@ -55,7 +55,7 @@ function App() {
     <>
       <InvoiceHeaderContainer setIsUserLoggedIn={setIsUserLoggedIn} />
       <Formik
-        initialValues={JSON.parse(localStorage.getItem('draftFormData')) || JSON.parse(localStorage.getItem('formData')) || initialState}
+        initialValues={JSON.parse(localStorage.getItem('formData')) || JSON.parse(localStorage.getItem('draftFormData')) || initialState}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, errors, touched }) => {
           handleSubmit({ formData: values })

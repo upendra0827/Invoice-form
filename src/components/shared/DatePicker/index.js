@@ -19,7 +19,7 @@ const FormikDatePicker = ({ element, props }) => {
     const { setFieldValue } = useFormikContext();
     const [field] = useField(element);
     return (
-        <div style={{}}>
+        <div style={{}} className='date-picker-container'>
             <DatePicker
                 id={element.name}
                 {...field}

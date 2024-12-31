@@ -1,14 +1,12 @@
 .currency-field {
-    /* border-left: none !important; */
     border-top-right-radius: var(--RadiusS);
-    /* border-top-left-radius: 0;
-    border-bottom-left-radius: 0; */
-    padding-left: 10px !important;
     background-image: url('/src/assets/icons/Currency.svg'), url('/src/assets/icons/CurrencyCode.svg');
     background-position: left 0px center, right 10px center;
     background-repeat: no-repeat;
-    /* background-size: 40px; */
-    padding: 0 0 0 44px !important;
     height: 40px;
-    padding-left: 36px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: var(--RadiusS);
+    text-indent: 40px;
+    padding: 0 !important;
 }
