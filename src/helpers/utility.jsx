@@ -57,7 +57,7 @@ export const renderForm = (props, element) => {
                     <Field
                         name={element.name}
                         id={element.name}
-                        type={element.type}
+                        type={element.formType || element.type}
                         placeholder={element.placeholder}
                         style={{
                             height: '41px',

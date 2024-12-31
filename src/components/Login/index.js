@@ -55,6 +55,7 @@ const LoginForm = ({ setIsUserLoggedIn }) => {
                                 placeholder: 'Password',
                                 label: 'Password',
                                 type: 'text',
+                                formType: 'password',
                                 important: true
                             })}
                         </div>
