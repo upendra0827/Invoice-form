@@ -87,7 +87,6 @@ export const renderForm = (props, element) => {
             )
 
         case 'dropdown':
-            // console.log(checkFieldError(props, element.name), props.errors, element.name, '..............')
             return (
                 <div className="input-field">
                     <div style={{ display: 'flex', alignItems: 'flex-start' }}>
@@ -134,8 +133,7 @@ export const renderForm = (props, element) => {
                     <div style={{ display: 'flex', alignItems: 'flex-start' }}>
                         {element.label && <label htmlFor={element.name}>{element.label}</label>}
                         {element.important && <img src={StarIcon} alt="star" width='6px' />}
-                    </div>import {checkFieldError} from './utility';
-
+                    </div>
                     <FormikDatePicker element={element} props={props} />
                     <ErrorMessage className="error" name={element.name} component="div" style={{ color: "red" }} />
                 </div>

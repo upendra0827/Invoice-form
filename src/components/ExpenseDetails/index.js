@@ -13,9 +13,9 @@ const Toggle = () => {
   return (
     <div className="expenses-conteiner-header">
       <span className="expenses-currency">
-        <span>$ 00</span>
+        <span>$ 0.00</span>
         <span>/</span>
-        <span>{selected} 00</span>
+        <span>{selected} 0.00</span>
       </span>
       <div className="options" onClick={() => setSelected(prev => prev === '$' ? '%' : '$')}>
         <span className={selected === '$' && 'selected'} >$</span>
