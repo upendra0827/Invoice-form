@@ -1,11 +1,11 @@
 .currency-field {
-    border-left: none;
+    border-left: none !important;
     border-top-right-radius: var(--RadiusS);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.currency img {
+.currency-icon {
     border: 1px solid var(--BorderSecondary) !important;
     border-right: none !important;
     border-top-left-radius: var(--RadiusS);

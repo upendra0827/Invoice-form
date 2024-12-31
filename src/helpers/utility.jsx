@@ -101,7 +101,7 @@ export const renderForm = (props, element) => {
                             height: '41px',
                             padding: "8px",
                             border: !checkFieldError(props, element.name) ? "1px solid #64748B" : '1px solid red',
-                            borderRadius: "4px",
+                            borderRadius: "8px",
                             width: "100%",
                             color: !element.options.filter(option => option.label === getFieldValue(props, element.name)).length ? "#aaa" : '#0D0F11',
                             backgroundColor: 'white',

@@ -8,7 +8,7 @@ const CurrencyForm = ({ props, element }) => {
     return (
         <div className="currency">
             <div style={{ display: "flex", alignItems: "center" }}>
-                <img src={CurrencyIcon} alt="currency-icon" style={{ border: "1px solid #64748B", borderRight: 'none' }} />
+                <img src={CurrencyIcon} alt="currency-icon" className="currency-icon" style={{ border: "1px solid #64748B", borderRight: 'none' }} />
                 <Field
                     name={element.name}
                     id={element.name}
