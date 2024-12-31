@@ -11,3 +11,10 @@
     border-top-left-radius: var(--RadiusS);
     border-bottom-left-radius: var(--RadiusS);
 }
+
+.currency-icon-error {
+    border: 1px solid red !important;
+    border-right: none !important;
+    border-top-left-radius: var(--RadiusS);
+    border-bottom-left-radius: var(--RadiusS);
+}
