@@ -2,9 +2,9 @@ input {
     box-sizing: border-box;
     max-width: 100%;
     width: 100%;
-    padding: var(--SpacingS);
+    /* padding: var(--SpacingS); */
     padding-left: 36px;
-    padding-right: 0;
+    /* padding-right: 0; */
     border-radius: var(--RadiusS);
 }
 
@@ -24,7 +24,8 @@ input {
     background-image: url('/src/assets/icons/Calender.svg'), url('/src/assets/icons/ChevronDown.svg');
     background-repeat: no-repeat;
     background-position: left 10px center, right 10px center;
-    background-size: 12px;
+    /* background-size: 16px 12px; */
     appearance: none;
+    height: 40px;
     /* border: 1px solid red; */
 }

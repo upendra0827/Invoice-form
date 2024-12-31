@@ -1,20 +1,14 @@
 .currency-field {
-    border-left: none !important;
+    /* border-left: none !important; */
     border-top-right-radius: var(--RadiusS);
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.currency-icon {
-    border: 1px solid var(--BorderSecondary) !important;
-    border-right: none !important;
-    border-top-left-radius: var(--RadiusS);
-    border-bottom-left-radius: var(--RadiusS);
-}
-
-.currency-icon-error {
-    border: 1px solid red !important;
-    border-right: none !important;
-    border-top-left-radius: var(--RadiusS);
-    border-bottom-left-radius: var(--RadiusS);
+    /* border-top-left-radius: 0;
+    border-bottom-left-radius: 0; */
+    padding-left: 10px !important;
+    background-image: url('/src/assets/icons/Currency.svg'), url('/src/assets/icons/CurrencyCode.svg');
+    background-position: left 0px center, right 10px center;
+    background-repeat: no-repeat;
+    /* background-size: 40px; */
+    padding: 0 0 0 44px !important;
+    height: 40px;
+    padding-left: 36px;
 }
